@@ -17,12 +17,28 @@
 require_once "classes/page_contents.php";
 require_once "classes/req.php";
 
+require_once "controllers/car_controller.php";
+
 PageContents::ShowNavbar();
 PageContents::ShowCarusel();
 ?>
 
 <div class="container">
-    
+    $page = Req::GetPage();
+    switch($page) {
+        case "car_details":
+            /*
+            A /controllers mappában lévő controller osztályok
+            megfelelő statikus függvényei kezelik, hogy mely
+            php fájlt kell meghívni, esetleg előkészítik a php
+            fájl számára az adatbázisból kinyert adatokat.
+            */
+            CarController::GetCarDetails($_GET["car_id"]);
+            echo '<script>changePageTitle("Autó megtekintése");</script>';
+            break;
+        default:
+            CarController::ListCars();
+            echo '<script>changePageTitle("Főmenü");</script>';
 </div>
 
 
