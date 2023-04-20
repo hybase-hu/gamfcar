@@ -14,31 +14,82 @@
 <?php
 
 
+require_once "controllers/car_controller.php";
+require_once "controllers/order_controller.php";
+require_once "controllers/login_controller.php";
+require_once "controllers/opinion_controller.php";
+require_once "controllers/contact_controller.php";
+require_once "controllers/list_message_controller.php";
 require_once "classes/page_contents.php";
 require_once "classes/req.php";
-
-require_once "controllers/car_controller.php";
 
 PageContents::ShowNavbar();
 PageContents::ShowCarusel();
 ?>
 
 <div class="container">
-    $page = Req::GetPage();
-    switch($page) {
-        case "car_details":
-            /*
-            A /controllers mappában lévő controller osztályok
-            megfelelő statikus függvényei kezelik, hogy mely
-            php fájlt kell meghívni, esetleg előkészítik a php
-            fájl számára az adatbázisból kinyert adatokat.
-            */
-            CarController::GetCarDetails($_GET["car_id"]);
-            echo '<script>changePageTitle("Autó megtekintése");</script>';
-            break;
-        default:
-            CarController::ListCars();
-            echo '<script>changePageTitle("Főmenü");</script>';
+    <script>
+        function changePageTitle( title){
+            document.title = "Gamf Car | " + title;
+        }
+    </script>
+
+    <?php
+        $page = Req::GetPage();
+        switch($page) {
+            case "car_details":
+                /*
+                A /controllers mappában lévő controller osztályok
+                megfelelő statikus függvényei kezelik, hogy mely
+                php fájlt kell meghívni, esetleg előkészítik a php
+                fájl számára az adatbázisból kinyert adatokat.
+                */
+                CarController::GetCarDetails($_GET["car_id"]);
+                echo '<script>changePageTitle("Autó megtekintése");</script>';
+                break;
+            
+            case "order":
+                OrderController::GetOrderPageForm();
+                echo '<script>changePageTitle("Megrendelés véglegesítése");</script>';
+                break;
+            case "order_success":
+                OrderController::GetOrderSuccess();
+                echo '<script>changePageTitle("Sikeres rendelés");</script>';
+                break;
+            case "order_details":
+                OrderController::GetOrderDetails();
+                echo '<script>changePageTitle("Megrendelés részletei");</script>';
+                break;
+            case "contact":
+                ContactController::GetPage();
+                echo '<script>changePageTitle("Autó megtekintése");</script>';
+                break;
+            case "login":
+                LoginController::Login();
+                echo '<script>changePageTitle("Bejelentkezés");</script>';
+                break;
+            case "logout":
+                LoginController::Logout();
+                echo '<script>changePageTitle("Kijelentkezés");</script>';
+                break;
+            case "register":
+                LoginController::Register();
+                echo '<script>changePageTitle("Regisztráció");</script>';
+                break;
+            case "opinions":
+                OpinionController::GetOpinionPage();
+                echo '<script>changePageTitle("Vélemények");</script>';
+                break;
+            case "list_message":
+                MessageController::ListMessage();
+                echo '<script>changePageTitle("Üzenet küldések");</script>';
+                break;
+            default:
+                CarController::ListCars();
+                echo '<script>changePageTitle("Főmenü");</script>';
+        }
+        
+    ?>
 </div>
 
 
