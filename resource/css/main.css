@@ -1,0 +1,33 @@
+.submenu {
+    padding:5rem;
+    margin: 50px 0;
+    background-color: #222;
+    color:#CCC;
+    background-image:linear-gradient(to bottom, rgba(38, 38, 39, 0.723), rgba(46, 45, 46, 0.999)), url("/gamfcar/resource/img/carusel/car3.jpg");
+    object-fit: contain;
+    object-position: center;
+}
+
+.order_id {
+    font-size:4rem;
+    text-align: center;
+    background-color: #CCC;
+    border: 2px solid black;
+    border-radius: 5px;
+    position: relative;
+    min-height: 15rem;
+}
+
+.order_id p {
+    position: absolute;
+    margin:0;
+    transform: translate(-50%, -50%);
+    top:50%;
+    left:50%;
+}
+
+.listcard_img {
+    max-width:100%;
+    object-fit:cover;
+    max-height:100%;
+}
