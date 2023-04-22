@@ -69,7 +69,7 @@ if (
                     );';
                     //print $sql;
                     mysqli_query($connect,$sql);
-                    header("Location: /gamfcar/index.php?page=order_details&order_id=".$order_id);
+                    header("Location: /index.php?page=order_details&order_id=".$order_id);
                 }
 
                 

@@ -119,7 +119,7 @@ if (isset($_POST["send"])) {
             <div class="embed-responsive embed-responsive-1by1">
                 <!-- TODO itt még lehet nem minden fasza -->
                 <iframe class="embed-responsive-item" height="400" width="100%" autoplay=false title="Local video from gamf car" frameborder="0">
-                    <video height="400" width="100%" src="http://pinkboss.ddns.net:100/gamfcar/resource/cars.webm" type="video/mp4" />
+                    <video height="400" width="100%" src="/resource/cars.webm" type="video/mp4" />
                 </iframe>
             </div>
         </div>                      

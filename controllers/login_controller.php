@@ -23,7 +23,7 @@ class LoginController {
 
     public static function Logout() {
         session_destroy();
-        header("Location: /gamfcar/index.php");
+        header("Location: /index.php");
     }
 
 }

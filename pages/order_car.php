@@ -12,7 +12,7 @@
         
         <div class="card-body">
             <h3 class="card-title">Megrendelés előkészítése</h3>
-            <form action="/gamfcar/index.php?page=order_success" method="post">
+            <form action="/index.php?page=order_success" method="post">
                 <label for="order_name" class="form-label">Megrendelő teljes neve</label>
                 <input type="text" name="order_name" id="order_name" class="form-control" required minlength="5" placeholder="Megrendelő teljes neve" >
 

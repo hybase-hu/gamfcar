@@ -19,7 +19,7 @@ if (isset($_POST["username"]) && isset($_POST["password"])){
 
         $_SESSION["loggedin"] = true;
         $_SESSION["expire"] = time() + (20 * 60);
-        header("Location: /gamfcar/index.php");
+        header("Location: /index.php");
 
     }
     else {
@@ -53,7 +53,7 @@ if (isset($_POST["username"]) && isset($_POST["password"])){
 
                 <button type="submit" class="btn btn-primary w-100 my-2">Bejelentkezés</button>
             </form>
-            <p class="text-center"><a href="/gamfcar/index.php?page=register" class="" style="text-decoration:none;">Regisztráció</a></p>
+            <p class="text-center"><a href="/index.php?page=register" class="" style="text-decoration:none;">Regisztráció</a></p>
         </div>
     </div>
 </div>

@@ -46,7 +46,7 @@ if (isset($_POST["submit"])){
                             mysqli_query($connection,$sql);
 
                             //POST FORM TÖRLÉSE
-                            header("Location: /gamfcar/index.php?page=opinions");
+                            header("Location: /index.php?page=opinions");
 
                         }
                         else {
@@ -55,7 +55,7 @@ if (isset($_POST["submit"])){
                     }
                 }
                 else {
-                    header("Location: /gamfcar/index.php?page=login");
+                    header("Location: /index.php?page=login");
                 }
 
             }

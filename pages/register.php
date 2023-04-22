@@ -31,7 +31,7 @@ if (isset($_POST["username"]) &&
             if (session_status() == PHP_SESSION_NONE) {session_start();}
             if (mysqli_query($connection,$sql)){
                 
-                header("Location: /gamfcar/index.php?page=login&&success=true");
+                header("Location: /index.php?page=login&&success=true");
             }
             else {
                 $message = "Nem sikerült a regisztráció.";

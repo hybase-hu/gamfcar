@@ -8,7 +8,7 @@ class OrderController {
             include_once "./pages/order_car.php";
         }
         else {
-            header("Location: /gamfcar/index.php?page=login");
+            header("Location: /index.php?page=login");
         }
     }
 
