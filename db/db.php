@@ -2,9 +2,9 @@
 
 class Db {
 	private static $server_name = "localhost";
-	private static $user_name = "root";
-	private static $password = "";
-	private static $db_name = "gamf_car";
+	private static $user_name = "epiz_34058633";
+	private static $password = "FcUyrtSs4T";
+	private static $db_name = "gamfcar";
 	private static $connection = null;
 
     /*

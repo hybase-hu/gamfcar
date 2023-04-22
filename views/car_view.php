@@ -22,11 +22,11 @@ class CarView {
             echo '
             <div class="col-md-4 p-2">
                 <div class="card shadow-lg" >
-                    <img src="resource/img/cars/'.$car->car_main_image.'" class="card-img-top" alt="'.$car->car_brand.'" style="height:20rem;object-fit:cover;">
+                    <img src="/resource/img/cars/'.$car->car_main_image.'" class="card-img-top" alt="'.$car->car_brand.'" style="height:20rem;object-fit:cover;">
                     <div class="card-body">
                         <h3 class="card-title">'.$car->car_brand.'</h3>
                         <h5 class="card-title">'.$car->car_type. " - " . $car->car_release_date . '</h5>
-                        <a href="/gamfcar/index.php?page=car_details&car_id='.$car->car_id.'" class="btn btn-primary">Megtekintés</a>
+                        <a href="/index.php?page=car_details&car_id='.$car->car_id.'" class="btn btn-primary">Megtekintés</a>
                     </div>
                 </div>
             </div>';
@@ -50,7 +50,7 @@ class CarView {
 
         */
         if ($car_row == null) {
-            header("Location: /gamfcar/");
+            header("Location: /");
         }
 
         $car_details = new CarModel();
@@ -68,7 +68,7 @@ class CarView {
         $car_details->car_main_image = $car_row[6];
         $car_details->car_hp = $car_row[7];
         $car_details->car_price = $car_row[8];
-        include "./pages/car_details.php";
+        include "./car_details.php";
     }
 }
 
