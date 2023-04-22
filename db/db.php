@@ -1,10 +1,10 @@
 <?php
 
 class Db {
-	private static $server_name = "localhost";
+	private static $server_name = "sql202.epizy.com";
 	private static $user_name = "epiz_34058633";
 	private static $password = "FcUyrtSs4T";
-	private static $db_name = "gamfcar";
+	private static $db_name = "epiz_34058633_gamfcar";
 	private static $connection = null;
 
     /*
