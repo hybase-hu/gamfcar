@@ -10,7 +10,7 @@ class OpinionView {
             <div class="card m-2 shadow-lg">
                 <div class="card-body">
                     <div class="row">
-                        <div class="col-sm-4"><img class="listcard_img" src="/gamfcar/resource/img/opinions_img/'.$opinion->img_url.'" alt="car_image" /></div>
+                        <div class="col-sm-4"><img class="listcard_img" src="/resource/img/opinions_img/'.$opinion->img_url.'" alt="car_image" /></div>
                         <div class="col-sm-8">
                             <div class="row">
                                 <div class="col-lg-4"><b>'.$opinion->username.'</b></div>

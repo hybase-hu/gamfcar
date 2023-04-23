@@ -8,7 +8,7 @@ $message = null;
 if (isset($_POST["submit"])){
 
 
-    if ( isset($_POST["rating"]) && isset($_POST["opinion_message"]) && isset($_FILES["img"])) {
+    if ( isset($_POST["rating"]) && isset($_POST["opinion_message"]) && isset($_FILES["img"]) && $_FILES["img"]["size"] != 0) {
         if (is_numeric($_POST["rating"])) {
             if (strlen($_POST["opinion_message"]) > 5) {
                 if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] == true) {

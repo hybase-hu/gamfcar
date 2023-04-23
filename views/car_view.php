@@ -56,6 +56,7 @@ class CarView {
         $car_details = new CarModel();
 
         $sql = "SELECT * FROM motor_type WHERE motor_type_id = ".$car_row[3].";";
+
         $motor_type = mysqli_query($connection,$sql);
         $motor_type_string = mysqli_fetch_row($motor_type);
 
@@ -68,7 +69,7 @@ class CarView {
         $car_details->car_main_image = $car_row[6];
         $car_details->car_hp = $car_row[7];
         $car_details->car_price = $car_row[8];
-        include "./car_details.php";
+        include "pages/car_details.php";
     }
 }
 

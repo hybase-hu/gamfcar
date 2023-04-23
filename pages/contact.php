@@ -22,7 +22,7 @@ if (isset($_POST["send"])) {
 
             mysqli_query($connection,$sql);
 
-            header("Location: /gamfcar/index.php?page=list_message");
+            header("Location: /index.php?page=list_message");
 
             
         }
@@ -117,10 +117,9 @@ if (isset($_POST["send"])) {
         </div>
         <div class="col-lg-6">
             <div class="embed-responsive embed-responsive-1by1">
-                <!-- TODO itt még lehet nem minden fasza -->
-                <iframe class="embed-responsive-item" height="400" width="100%" autoplay=false title="Local video from gamf car" frameborder="0">
-                    <video height="400" width="100%" src="/resource/cars.webm" type="video/mp4" />
-                </iframe>
+                <div class="embed-responsive embed-responsive-4by3">
+			        <video height="400" width="100%" src="/resource/cars.mp4" type="video/mp4" controls />
+                </div>
             </div>
         </div>                      
     </div>
