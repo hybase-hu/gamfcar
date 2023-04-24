@@ -80,7 +80,7 @@ if (isset($_POST["send"])) {
 
 
                 <div class="card-body m-2 bg-light">
-                    <form class="form" method="post" action="">
+                    <form class="form" method="post" action="" onsubmit="return checkForm()">
                         <?php if ($alert) { echo '<div class="alert bg-warning">'.$alert.'</div>';} ?>
                         <label for="contact" class="form-label">Kérjük adja meg, hogy vehetjük fel önnel a kapcsolatot</label>
                         <input type="text" class="form-control" placeholder="Telefonszám vagy email cím megadása" name="contact" id="contact" />
@@ -124,3 +124,17 @@ if (isset($_POST["send"])) {
         </div>                      
     </div>
 </div>
+<script>
+    function checkForm() {
+        var contact = document.getElementById('contact');
+        var message = document.getElementById('message');
+        if (message.value.length > 0 && contact.value.length > 0) {
+            return true;
+        }
+        else {
+            alert("Kérjük, töltsön ki minden adatot a kapcsolat felvételhez. Köszönjük!");
+            return false;
+        }
+    }
+
+</script>

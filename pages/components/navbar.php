@@ -18,9 +18,10 @@
                 <a class="nav-link active" aria-current="page" href="/?page='.$menu["url"].'">'.$menu["title"].'</a>
                 </li>';
         }
+        if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] == true){
+            echo '<li class="nav-item"><a class="nav-link active" aria-current="page" href="/index.php?page=list_message">Üzenetek</a></li>';
+        }
       ?>
-      
-
 
       <!--
       <li class="nav-item">
@@ -36,6 +37,7 @@
 
       if (isset($_SESSION["loggedin"])){
         if ($_SESSION["loggedin"] == true) {
+
           echo '<li class="nav-item"><a class="nav-link active" aria-current="page" href="/index.php?page=logout">'
             . $_SESSION["full_name"] . " ("  . $_SESSION["username"] .
             ') Kijelentkezés</a></li>';
