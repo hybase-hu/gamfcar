@@ -67,7 +67,7 @@ if (isset($_POST["username"]) &&
 
                 <button type="submit" class="btn btn-primary w-100 my-2">Regisztráció</button>
             </form>
-            <p class="text-center"><a href="/gamfcar/index.php?page=login" class="" style="text-decoration:none;">Bejelentkezés</a></p>
+            <p class="text-center"><a href="/index.php?page=login" class="" style="text-decoration:none;">Bejelentkezés</a></p>
         </div>
     </div>
 </div>
