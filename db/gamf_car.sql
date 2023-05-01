@@ -76,10 +76,7 @@ INSERT INTO `email_message` (`id`, `username`, `contact`, `message`, `message_ti
 (8, 'Vendég', 'stephengreat@hotmail.hu', 'dsafdsf  dsfd dfsfd s fdsafd sa fds', '2023-03-27 19:00:17'),
 (9, 'Vendég', 'stephengreat@hotmail.hu', 'dsafdsf  dsfd dfsfd s fdsafd sa fds', '2023-03-27 19:01:13'),
 (10, 'admin', 'admin@mail.hu', 'Hallod, mióta várok arra a verdára már? Hogy áll?', '2023-03-27 20:12:15'),
-(11, 'admin', 'admin@mail.hu', 'Nahhh, válaszoljatok már!!! Vissza mondom a fenébe is', '2023-03-27 20:13:04'),
-(12, 'admin', 'Kérem', 'Vegye fel a kapcsolatot', '2023-03-28 20:30:55'),
-(13, 'Vendég', 'nagyfarok@bigdick.hu', 'Miért nincs hamburger a büfében??', '2023-04-15 19:54:54'),
-(14, 'admin', '\' OR 1=1;-- -', '\' OR 1=1;-- -', '2023-04-18 22:21:20');
+
 
 -- --------------------------------------------------------
 
@@ -123,7 +120,7 @@ CREATE TABLE `opinions` (
 INSERT INTO `opinions` (`id`, `created_at`, `username`, `message`, `rating`, `img_url`) VALUES
 (1, '2023-03-27 18:09:22', 'steph', 'Nincs ingyen kávé', 4, '6421bjokocsi.jpg'),
 (2, '2023-03-27 18:10:21', 'steph', 'I fell in love with your voice on Durante\'s Celestia EP, had no idea you were such a talented DJ as well until I stumbled upon your Twitch channel recently. Love these mixes and the visuals are all really excellent as well, big props to the VJ/person running the stream as well :)\r\nI fell in love with your voice on Durante\'s Celestia EP, had no idea you were such a talented DJ as well until I stumbled upon your Twitch channel recently. Love these mixes and the visuals are all really excellent as well, big props to the VJ/person running the stream as well :)', 5, '6421bcar1.jpg'),
-(3, '2023-04-15 20:15:28', 'admin', 'Nagyon nagy kocsit szerettem volna de nem volt. Azt mondták tuti kompenzálok valamit, ezt adták... kapják be.', 1, '643aefiat-500-elettrica-3-1-7.jpg'),
+(3, '2023-04-15 20:15:28', 'admin', 'Nagyon nagy kocsit szerettem volna de nem volt. Azt mondták tuti kompenzálok valamit, ezt adták....', 1, '643aefiat-500-elettrica-3-1-7.jpg'),
 (4, '2023-04-18 22:20:51', 'admin', '\' OR 1=1;-- -', 5, '643effiat-500-elettrica-3-1-7.jpg');
 
 -- --------------------------------------------------------
@@ -146,10 +143,7 @@ CREATE TABLE `orders` (
 --
 -- Dumping data for table `orders`
 --
-
-INSERT INTO `orders` (`order_id`, `order_name`, `order_driver_license`, `order_payment`, `order_color`, `order_car_id`, `order_finish_date`, `user_name`) VALUES
-('4c5e8', 'Nagy István', 'CZ12345678', '2', '4', 1, '2023-05-17 00:00:00', 'admin'),
-('c6493', 'Anyukad', '1234567891', '2', '4', 4, '2023-05-17 00:00:00', 'admin');
+;
 
 -- --------------------------------------------------------
 
